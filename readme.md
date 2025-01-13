@@ -39,3 +39,38 @@ Represents a graphical representation of the projectile's trajectory.
 - `PROJECTILE`: The symbol used to represent the projectile in the graph.
 - `x_axis_tick`: The symbol used to represent the x-axis tick in the graph.
 - `y_axis_tick`: The symbol used to represent the y-axis tick in the graph.
+
+
+
+### Usage
+
+To use the Projectile Trajectory Calculator, you can create instances of the `Projectile` and `Graph` classes and call their methods as needed. Below is an example:
+
+```python
+from projectile import Projectile
+from graph import Graph
+
+# Create a projectile instance
+projectile = Projectile(speed=50, height=1.5, angle=45)
+
+# Calculate the trajectory coordinates
+coordinates = projectile.calculate_all_coordinates()
+
+# Create a graph instance
+graph = Graph(coordinates)
+
+# Generate the trajectory graph
+graph.create_trajectory()
+```
+
+### Contributing
+
+If you would like to contribute to this project, please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
+
+

@@ -144,3 +144,15 @@ class Graph:
         graph = "\n" + "\n".join(matrix_axes) + "\n"
 
         return graph
+
+
+
+def projectile_helper(speed,height,angle):
+    ball = Projectile(speed, height, angle)
+    print(ball)
+    coordinates = ball.calculate_all_coordinates()
+    graph = Graph(coordinates)
+    print(graph.create_coordinates_table())
+    print(graph.create_trajectory())
+
+projectile_helper(10,3,45)
