@@ -1,6 +1,6 @@
 # 🎯 Projectile Trajectory Calculator
 
-A Python module for calculating and visualizing projectile motion trajectories with ASCII graphics.
+The Projectile Trajectory Calculator is a versatile tool for simulating and analyzing projectile motion in 2D space. It combines precise physics calculations with user-friendly ASCII graphics, making it ideal for educational purposes and quick trajectory analysis. Whether you're studying physics or need to visualize ballistic paths, this calculator provides accurate results with a simple interface.
 
 ## ✨ Features
 
