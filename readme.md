@@ -1,76 +1,76 @@
-## Projectile Trajectory Calculator
-This project provides classes to calculate and visualize the trajectory of a projectile.
+# 🎯 Projectile Trajectory Calculator
 
-### Classes
+A Python module for calculating and visualizing projectile motion trajectories with ASCII graphics.
 
-#### Projectile
-Represents a projectile with a given speed, height, and angle.
+## ✨ Features
 
-**Attributes:**
-- `speed (float)`: The speed of the projectile in m/s.
-- `height (float)`: The initial height of the projectile in meters.
-- `angle (float)`: The launch angle of the projectile in degrees.
+- Calculate projectile motion with given speed, height, and angle
+- Generate coordinate tables for trajectory points
+- Visualize trajectory using ASCII graphics
+- Real-time property updates for projectile parameters
+- Physics-based calculations using standard gravitational acceleration
 
-**Methods:**
-- `__init__(speed, height, angle)`: Initializes the projectile with speed, height, and angle.
-- `__str__()`: Returns a string representation of the projectile details.
-- `__calculate_displacement()`: Calculates the horizontal displacement of the projectile.
-- `__calculate_y_coordinate(x)`: Calculates the y-coordinate for a given x-coordinate.
-- `calculate_all_coordinates()`: Calculates all coordinates of the projectile's trajectory.
-- `height`: Property to get or set the height of the projectile.
-- `angle`: Property to get or set the angle of the projectile.
-- `speed`: Property to get or set the speed of the projectile.
-- `__repr__()`: Returns a string representation of the projectile object.
+## 📦 Installation
 
-#### Graph
-Represents a graphical representation of the projectile's trajectory.
+1. Ensure Python 3.6+ is installed
+2. Clone the repository:
 
-**Attributes:**
-- `coord (list)`: A list of coordinates representing the projectile's trajectory.
+```sh
+git clone https://github.com/yourusername/projectile-trajectory-calculator.git
+cd projectile-trajectory-calculator
 
-**Methods:**
-- `__init__(coord)`: Initializes the graph with the given coordinates.
-- `__repr__()`: Returns a string representation of the graph object.
-- `create_coordinates_table()`: Creates a table of x and y coordinates.
-- `create_trajectory()`: Creates a graphical representation of the projectile's trajectory.
+🚀 Usage
+Basic example:
 
-### Constants
-- `GRAVITATIONAL_ACCELERATION`: The gravitational acceleration constant (9.81 m/s^2).
-- `PROJECTILE`: The symbol used to represent the projectile in the graph.
-- `x_axis_tick`: The symbol used to represent the x-axis tick in the graph.
-- `y_axis_tick`: The symbol used to represent the y-axis tick in the graph.
+from main import projectile_helper
+# Parameters: speed (m/s), height (m), angle (degrees)
+projectile_helper(10, 3, 45)
+
+Output:
+Projectile details:
+speed: 10 m/s
+height: 3 m
+angle: 45°
+displacement: 10.2 m
+
+  x      y
+  0   3.00
+  1   4.39
+  2   5.57
+  3   6.54
+  4   7.29
+  5   7.84
+  6   8.17
+  7   8.29
+  8   8.20
+  9   7.90
+ 10   7.39
+
+⊣     ∙
+⊣  ∙∙∙ ∙∙∙
+⊣ ∙       ∙
+⊣∙         ∙
+⊣           ∙
+⊣            ∙
+⊣
+ TTTTTTTTTTTTT
+
+
+ 📚 API Reference
+Projectile Class
+Properties
+speed: Initial velocity (m/s)
+height: Initial height (m)
+angle: Launch angle (degrees)
+Methods
+calculate_all_coordinates(): Returns list of (x,y) trajectory points
+Other methods documented in source code
 
 
 
-### Usage
 
-To use the Projectile Trajectory Calculator, you can create instances of the `Projectile` and `Graph` classes and call their methods as needed. Below is an example:
-
-```python
-from projectile import Projectile
-from graph import Graph
-
-# Create a projectile instance
-projectile = Projectile(speed=50, height=1.5, angle=45)
-
-# Calculate the trajectory coordinates
-coordinates = projectile.calculate_all_coordinates()
-
-# Create a graph instance
-graph = Graph(coordinates)
-
-# Generate the trajectory graph
-graph.create_trajectory()
+Graph Class
+Methods
+create_coordinates_table(): Generates coordinate table
+create_trajectory(): Creates ASCII visualization
 ```
-
-### Contributing
-
-If you would like to contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
-
-
